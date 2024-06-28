@@ -1,0 +1,68 @@
+.spinner {
+    width: 100px;
+    height: 100px;
+    border: solid while;
+    border-radius: 50%;
+    position: relative;
+    animation-name: spin;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  
+  
+    
+    animation-timing-function: linear;
+    cursor:pointer;
+  }
+  
+  .spinner > div {
+    width: 40%;
+    height: 40%;
+    border: solid white;
+    border-radius: inherit;
+    animation-name: child;
+    animation-duration: 2s;
+    text-align: center;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    position: absolute;
+  
+  }
+  
+  div.child-1 {
+    background-color: yellow;
+    top: 0;
+    right: 0;
+  }
+  
+  div.child-2 {
+    background-color: rgb(0, 13, 255);
+    top: 0;
+    left: 0;
+  }
+  
+  div.child-3 {
+    background-color: rgb(255, 0, 34);
+    bottom: 0;
+    right: 0;
+  }
+  
+  div.child-4 {
+    background-color: rgb(0, 255, 72);
+    bottom: 0;
+    left: 0;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotateZ(360deg);
+    }
+  }
+  
+  @keyframes child {
+    to {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%)
+    }
+  }
